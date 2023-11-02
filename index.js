@@ -211,13 +211,13 @@ function animate() {
   }
 
   // jumping
-
-if (enemy.position.y + enemy.height <= 100){  if (enemy.velocity.y < 0) {
+  if (enemy.velocity.y < 0) {
     enemy.switchSprite('jump')
   } else if (enemy.velocity.y > 0) {
     enemy.switchSprite('fall')
   }
-}
+
+// if (enemy.position.y + enemy.height >= 100){}
 
   // detect for collision & enemy gets hit
   if (
